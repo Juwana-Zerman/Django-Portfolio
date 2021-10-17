@@ -4,6 +4,8 @@
 
 This is a portfolio I made with Python using the Django framework. I have made other portfolios in the past using WordPress and a Bootstrap template. I figured I would build one from scratch to enhance my Django skills. <br />
 
+**Visit this [Portfolio](https://www.juwanazerman.com/)**
+
 **If you would like to make contributions see the CONTRIBUTING.md file.**
 
 ![Portfolio Snippet](https://i.imgur.com/T48CWPF.png)
