@@ -22,7 +22,7 @@ Allowing collaboration on this project will allow me to complete the final featu
 
     * Run **```git remote add upstream <your git fork link from github>```**
 
-    * Run **```git pull upstream master```**
+    * Run **```git pull upstream main```**
 
         * These 2 commands will synchronize your forked version of the project with the actual repository.
 
