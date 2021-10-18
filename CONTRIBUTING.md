@@ -9,6 +9,7 @@ Allowing collaboration on this project will allow me to complete the final featu
 3. Check virtualenv version by running: **```virtualenv --version```. If it's not installed intall it using **```py -m pip install virtualenv```** on Windows or **```python3 -m pip install virtualenv```** depending on your system.
 4. Create a virtual environment by running: **```py -m venv env```** on Windows or **```python3 -m venv env```** on other systems.
 5. Activate virtual environment by running: **```.\env\Scripts\activate```** on Windows or **```source env/bin/activate```** on other systems.
+6. Run **```pip install -r requirements.txt```**
 
 ** * May need to create an actual Postgresql database (checking) and name it djangoportfolio. Follow the prompts to do so.**
 
