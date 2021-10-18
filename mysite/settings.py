@@ -13,13 +13,14 @@ Try this site: https://stackoverflow.com/questions/66593382/how-to-pass-secrets-
 """
 # Add a comma after SECRET_KEY here and enter your generated key between quotes ('SECRET_KEY', '') see below to generate
 SECRET_KEY = os.environ.get('SECRET_KEY')
+# Remove SECRET_KEY before pushing to GitHub
 
 # To generate a secret key run the following command in the terminal:
 # python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False # os.environ.get('DEBUG') # switch to True to run locally
+DEBUG = False  # switch to True to run locally # switch back to False before pushing to GitHub
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://zerman-portfolio.herokuapp.com/']
 
@@ -75,6 +76,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 # **********Comment out this DATABASES section to run locally*************
+# **********Uncomment this DATABASES section before pushing to GitHub************
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -85,10 +87,11 @@ DATABASES = {
 }
 
 # ***********Uncomment this DATABASES section to run locally***********
+# ***********Comment out this DATABASES section before pushing to GitHub*******
 
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'ENGINE': 'django.db.backends.postgresql',
 #         'NAME': 'djangoportfolio',
 #         'USER': 'postgres',
 #         'PASSWORD': '',
