@@ -126,3 +126,5 @@ dmypy.json
 
 datadump.json
 /mysite/mysite/settings.py
+
+sqlite3.db
