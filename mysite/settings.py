@@ -20,7 +20,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False  # switch to True to run locally # switch back to False before pushing to GitHub
+DEBUG = True  # switch to True to run locally # switch back to False before pushing to GitHub
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://zerman-portfolio.herokuapp.com/']
 
@@ -75,19 +75,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# **********Comment out this DATABASES section to run locally*************
-# **********Uncomment this DATABASES section before pushing to GitHub************
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-    }
-}
 
-# ***********Uncomment this DATABASES section to run locally***********
-# ***********Comment out this DATABASES section before pushing to GitHub*******
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get('DB_NAME'),
+#         'USER': os.environ.get('DB_USER'),
+#         'PASSWORD': os.environ.get('DB_PASSWORD'),
+#     }
+# }
 
 # DATABASES = {
 #     'default': {
@@ -99,6 +95,18 @@ DATABASES = {
 #         'PORT': '5432',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'sqlite3.db',                      # Or path to database file if using sqlite3.
+        # 'USER': '',                      # Not used with sqlite3.
+        # 'PASSWORD': '',                  # Not used with sqlite3.
+        # 'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+        # 'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+    }
+}
+
 
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
