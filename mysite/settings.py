@@ -20,7 +20,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True  # switch to True to run locally # switch back to False before pushing to GitHub
+DEBUG = False  # switch to True to run locally 
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://zerman-portfolio.herokuapp.com/']
 
