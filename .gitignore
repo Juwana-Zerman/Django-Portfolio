@@ -125,6 +125,6 @@ dmypy.json
 .pyre/
 
 datadump.json
-/mysite/mysite/settings.py
+settings.py
 
 sqlite3.db
