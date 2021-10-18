@@ -10,8 +10,11 @@ Allowing collaboration on this project will allow me to complete the final featu
 4. Create a virtual environment by running: **```py -m venv env```** on Windows or **```python3 -m venv env```** on other systems.
 5. Activate virtual environment by running: **```.\env\Scripts\activate```** on Windows or **```source env/bin/activate```** on other systems.
 6. Run **```pip install -r requirements.txt```**
+7. If you receive a psycopg2 error and are running Linux, you may need to run:
+**```sudo apt-get update```**
+**```sudo apt-get install python3-pip python3-dev libpq-dev postgresql postgresql-contrib```**
 
-** * May need to create an actual Postgresql database (checking) and name it djangoportfolio. Follow the prompts to do so.**
+**A Postgresql database is needed to use the same database as the project. Those steps are lengthy and since no changes will be made to database models via open source, you may you the sqlite3 database which is the default for Django and created automatically. Follow the instructions in the mysite/settings.py file and uncomment that sqlite3 section. This settings.py file doesn't need to get pushed to GitHub.**
 
 ## ✳️ How to Contribute
 
@@ -31,11 +34,11 @@ Allowing collaboration on this project will allow me to complete the final featu
 
 5. Change into the new branch: Run **```git checkout <insert newly created branch name>```**
 
-6. Open the ```mysite/settings.py``` file and scroll to the SECRET_KEY entry and follow the instructions below it to generate a secret key to run the project. Once you have the key, insert it after the ```SECRET_KEY``` variable like so: ('SECRET_KEY', **'insert your key between quotes'**) You will need to remove this key before committing this file or just don't commit the ```settings.py``` file to keep your secret key a secret.
+6. Open the ```mysite/settings.py``` file and scroll to the SECRET_KEY entry and follow the instructions below it to generate a secret key to run the project. Once you have the key, insert it after the ```SECRET_KEY``` variable like so: ('SECRET_KEY', **'insert your key between quotes'**) You will need to remove this key before committing this file or just don't commit the ```settings.py``` file to keep your secret key a secret. This SECRET_KEY is needed to run Django.
 
-7. **DEBUG** will need to be changed to **True** in the **settings.py** file to get the project running locally.
+7. **DEBUG** will need to be changed to **True** in the **settings.py** file to get the project on your local machine. It is set to False for the deployed site (you don't have to worry about this).
 
-8. Scroll down and comment out the current DATABASES section and uncomment the one for local development below it.
+8. Scroll down and comment out the current DATABASES section and uncomment the one for local development below it (**The sqlite3 section**).
 
 9. In your terminal: Run: **```python manage.py runserver```** to start the app. You can visit the local link in the browser to view any changes made in real time.
 
@@ -43,5 +46,5 @@ Allowing collaboration on this project will allow me to complete the final featu
 
 12. Create a pull request to have your changes merged from your fork into the origin.
 
-#### ✳️ 🙂 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated. 🙂
+#### ✳️ 🙂 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated. 🙂
 
