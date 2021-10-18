@@ -31,9 +31,19 @@ Allowing collaboration on this project will allow me to complete the final featu
 
 5. Change into the new branch: Run **```git checkout <insert newly created branch name>```**
 
-6. Open the ```mysite/settings.py``` file and scroll to the SECRET_KEY entry and follow the instructions below it to generate a secret key to run the project. Once you have the key, insert it after the ```SECRET_KEY``` variable like so: ('SECRET_KEY', **'insert your key between quotes'**) You will need to remove this key before committing this file or just don't commit the ```settings.py``` file to keep your secret key a secret.
+6. Open the ```mysite/settings.py``` file and scroll to the SECRET_KEY entry and follow the instructions below it to generate a secret key to run the project. 
+7. Once you have the key, insert it after the ```SECRET_KEY``` variable like so: ('SECRET_KEY', **'insert your key between quotes'**) 
+8. You will need to remove this key before committing this file or just don't commit the ```settings.py``` file to keep your secret key a secret.
+
+### Note
+** More details should be given here
+* - do they need to have Django install?
+* - will this work with different flavors of Python , or is there a different command for other flavors 
+* - what is this secret key for? ex: is it for Github, is it to run the program 
 
 7. **DEBUG** will need to be changed to **True** in the **settings.py** file to get the project running locally.
+## what is considered production ?
+## or explain the difference between local and production 
 
 8. Scroll down and comment out the current DATABASES section and uncomment the one for local development below it.
 
