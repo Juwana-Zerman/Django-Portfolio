@@ -20,7 +20,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False  # switch to True to run locally 
+DEBUG = False  # switch to True to run locally
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://zerman-portfolio.herokuapp.com/']
 
@@ -77,6 +77,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
 # Comment out this DATABASES section to run the project on your local machine
+# Uncomment the sqlite3 section to run on you local machine
 
 DATABASES = {
     'default': {
@@ -98,8 +99,8 @@ DATABASES = {
 #     }
 # }
 
-# Uncomment this DATABASES section to run the project on your local machine
-# Do not commit this settings.py file or push to GitHub
+# ************Uncomment this DATABASES section to run the project on your local machine*******
+# ************Do not commit this settings.py file or push to GitHub**************
 
 # DATABASES = {
 #     'default': {
