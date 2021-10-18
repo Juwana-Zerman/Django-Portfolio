@@ -76,14 +76,16 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': os.environ.get('DB_NAME'),
-#         'USER': os.environ.get('DB_USER'),
-#         'PASSWORD': os.environ.get('DB_PASSWORD'),
-#     }
-# }
+# Comment out this DATABASES section to run the project on your local machine
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+    }
+}
 
 # DATABASES = {
 #     'default': {
@@ -96,16 +98,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'sqlite3.db',                      # Or path to database file if using sqlite3.
-        # 'USER': '',                      # Not used with sqlite3.
-        # 'PASSWORD': '',                  # Not used with sqlite3.
-        # 'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        # 'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-    }
-}
+# Uncomment this DATABASES section to run the project on your local machine
+# Do not commit this settings.py file or push to GitHub
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'sqlite3.db',
+#     }
+# }
 
 
 db_from_env = dj_database_url.config(conn_max_age=600)
