@@ -19,13 +19,12 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
+    created_on = models.DateTimeField(auto_now_add=False)
     status = models.IntegerField(choices=STATUS, default=0)
-
     objects = models.Manager()
 
-    published_date = models.DateTimeField(auto_now_add=True,
-                                          blank=True, null=True)
+    published_date = models.DateTimeField(auto_now_add=False,
+                                          blank=False, null=False)
 
     def publish(self):
         self.published_date = timezone.now()

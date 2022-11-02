@@ -59,6 +59,18 @@ class PostDetail(DetailView):
     ordering = ['created_on']
     template_name = 'post-detail.html' #'post_detail.html'
 
+def time_function(request):
+    # get the object
+    object = Object.objects.get(id=1)
+
+    # create date and time objects with current time zone
+    date_time_now = datetime.now(timezone.utc)
+
+    # assign time to object field
+    object.created_on = date_time_now
+    object.save()
+
+
 # class AddPost(CreateView):
 #     model = Post
 #     template_name = 'add_post.html'
