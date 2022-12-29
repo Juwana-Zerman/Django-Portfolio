@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponse, HttpResponseRedirect
 from django.views.generic import CreateView
 from .models import Contact
 from django.urls import reverse_lazy
-from .forms import ContactForm
+from .forms import ContactForm, PostForm
 from .models import Post
 from django.views.generic import DetailView
 from django.views.generic import ListView
