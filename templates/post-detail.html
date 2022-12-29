@@ -167,7 +167,7 @@
     <br/>
     {{ post.content }}
     <br/><br/>
-    <img src="{{ post.image.url }}" alt="{{ post.title }}" />
+    {% comment %} <img src="{{ post.image.url }}" alt="{{ post.title }}" /> {% endcomment %}
     <br/><br/>
     <a href="{% url 'blog' %}"><button type="submit" class="btn btn-secondary">Back To Posts</button></a>
 

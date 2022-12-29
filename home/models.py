@@ -22,7 +22,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=False)
     status = models.IntegerField(choices=STATUS, default=0)
     objects = models.Manager()
-    image = models.ImageField(upload_to='posts/', blank=True, null=True)
+    #image = models.ImageField(upload_to='post-detail/', blank=True, null=True)
     published_date = models.DateTimeField(auto_now_add=False,
                                           blank=False, null=False)
 
